@@ -14,7 +14,7 @@ class Sonosh < Formula
 
     if OS.mac?
       helper_path = buildpath/"helpers/macos/sonosh-helper"
-      system "swift", "build", "--package-path", helper_path, "--configuration", "release"
+      system "swift", "build", "--package-path", helper_path, "--configuration", "release", "--disable-sandbox"
       libexec.install helper_path/".build/release/sonosh-macos-helper"
     end
 
