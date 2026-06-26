@@ -2,7 +2,7 @@ class Sonosh < Formula
   desc "Sonos TUI and CLI"
   homepage "https://github.com/shlomiuziel/sonosh"
   url "https://github.com/shlomiuziel/sonosh/archive/refs/heads/main.tar.gz"
-  sha256 :no_check
+  sha256 "173730a59a5a23e736b625f6679a306415a9fb7a0cf1f9d6fee5e4f127a021b5"
   version "main"
   head "https://github.com/shlomiuziel/sonosh.git", branch: "main"
 
