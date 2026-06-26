@@ -1,26 +1,19 @@
 # homebrew-tap
 
-Homebrew tap for CLI tools and a few macOS apps.
+Homebrew tap for CLI tools and macOS apps.
 
-## Install
+## Install Tap
 
 ```bash
 brew tap shlomiuziel/tap
 ```
 
-## Install Packages
+## Available Formulae
+
+- `sonosh` - Sonos TUI and CLI
+
+## Install a Formula
 
 ```bash
-# formula
 brew install shlomiuziel/tap/sonosh
 ```
-
-`sonosh` builds the Go binary and, on macOS, compiles and installs the Swift
-media helper so the app can bind system playback controls and publish
-now-playing metadata automatically.
-
-## Packages
-
-### Formulae
-
-* `sonosh` - Sonos TUI and CLI
