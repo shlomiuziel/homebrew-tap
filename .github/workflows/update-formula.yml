@@ -43,6 +43,10 @@ jobs:
           text = text.sub(/^  url ".*"$/, "  url \"#{url}\"")
           text = text.sub(/^  sha256 .*$/, "  sha256 \"#{sha256}\"")
           text = text.sub(/^  version ".*"$/, "  version \"#{version}\"")
+          text = text.sub(
+            /^      system "swift", "build", "--package-path", helper_path, "--configuration", "release"(?:, "--disable-sandbox")?$/,
+            '      system "swift", "build", "--package-path", helper_path, "--configuration", "release", "--disable-sandbox"'
+          )
           File.write(path, text)
           RUBY
 
