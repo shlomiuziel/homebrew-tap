@@ -1,9 +1,9 @@
 class Sonosh < Formula
   desc "Sonos TUI and CLI"
   homepage "https://github.com/shlomiuziel/sonosh"
-  url "https://github.com/shlomiuziel/sonosh/archive/refs/heads/main.tar.gz"
-  sha256 "173730a59a5a23e736b625f6679a306415a9fb7a0cf1f9d6fee5e4f127a021b5"
-  version "main"
+  url "https://github.com/shlomiuziel/sonosh/archive/refs/tags/v0.3.2-sonosh.1.tar.gz"
+  sha256 "3bd7c05d3f599bbc9f7f2d36eed418acfe7db2ade1b853a4833109991ade55c3"
+  version "0.3.2-sonosh.1"
   head "https://github.com/shlomiuziel/sonosh.git", branch: "main"
 
   depends_on "go" => :build
