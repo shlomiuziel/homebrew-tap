@@ -1,21 +1,21 @@
 class Sonosh < Formula
   desc "Sonos TUI and CLI"
   homepage "https://github.com/shlomiuziel/sonosh"
-  url "https://github.com/shlomiuziel/sonosh/archive/refs/tags/v0.3.2-sonosh.1.tar.gz"
-  sha256 "3bd7c05d3f599bbc9f7f2d36eed418acfe7db2ade1b853a4833109991ade55c3"
-  version "0.3.2-sonosh.1"
+  url "https://github.com/shlomiuziel/sonosh/archive/refs/tags/v0.3.2-sonosh.2.tar.gz"
+  sha256 "2c312e1d4e3e36bd70ae3331eb856f58dbe3ea282f002c3c9224ad1713a05437"
+  version "0.3.2-sonosh.2"
   license "MIT"
 
   depends_on "go" => :build
 
   resource "sonosh-helper-darwin-arm64" do
-    url "https://github.com/shlomiuziel/sonosh/releases/download/v0.3.2-sonosh.1/sonosh-helper-darwin-arm64.tar.gz"
-    sha256 :no_check
+    url "https://github.com/shlomiuziel/sonosh/releases/download/v0.3.2-sonosh.2/sonosh-helper-darwin-arm64.tar.gz"
+    sha256 "da579dbe48bfc948c75f397ce12498ecf68487756b80761fb8789f0656ddae21"
   end
 
   resource "sonosh-helper-darwin-amd64" do
-    url "https://github.com/shlomiuziel/sonosh/releases/download/v0.3.2-sonosh.1/sonosh-helper-darwin-amd64.tar.gz"
-    sha256 :no_check
+    url "https://github.com/shlomiuziel/sonosh/releases/download/v0.3.2-sonosh.2/sonosh-helper-darwin-amd64.tar.gz"
+    sha256 "554d4b7b2a4c36d483c0eed1371fabf6d0e2701d05e6163d566e804eea32f6e3"
   end
 
   def install
