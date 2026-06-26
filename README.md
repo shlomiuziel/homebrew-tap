@@ -2,18 +2,34 @@
 
 Homebrew tap for CLI tools and macOS apps.
 
-## Install Tap
+## Install
+
+```bash
+# formula
+brew install shlomiuziel/tap/<name>
+```
+
+```bash
+# cask
+brew install --cask shlomiuziel/tap/<name>
+```
+
+## Packages
+
+### Formulae
+
+```text
+sonosh
+```
+
+### Casks
+
+```text
+(none yet)
+```
+
+## Tap
 
 ```bash
 brew tap shlomiuziel/tap
-```
-
-## Available Formulae
-
-- `sonosh` - Sonos TUI and CLI
-
-## Install a Formula
-
-```bash
-brew install shlomiuziel/tap/sonosh
 ```
