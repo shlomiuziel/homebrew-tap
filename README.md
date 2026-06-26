@@ -1,11 +1,11 @@
-# homebrew-sonosh
+# homebrew-tap
 
-Homebrew tap for `sonosh`.
+Homebrew tap for `sonosh` and other tools.
 
 Install:
 
 ```bash
-brew install shlomiuziel/sonosh/sonosh
+brew install shlomiuziel/tap/sonosh
 ```
 
 The formula builds the `sonosh` Go binary and, on macOS, compiles and installs

@@ -1,0 +1,53 @@
+name: Update Formula
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: "Source repository, e.g. shlomiuziel/sonosh"
+        required: true
+        type: string
+      tag:
+        description: "Release tag, e.g. v1.2.3"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update-formula:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update formula from release
+        env:
+          REPOSITORY: ${{ inputs.repository }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+
+          version="${TAG#v}"
+          tarball="https://github.com/${REPOSITORY}/archive/refs/tags/${TAG}.tar.gz"
+          tmpdir="$(mktemp -d)"
+          archive="${tmpdir}/source.tar.gz"
+
+          curl -fsSL "$tarball" -o "$archive"
+          sha256="$(shasum -a 256 "$archive" | awk '{print $1}')"
+
+          ruby - "$version" "$tarball" "$sha256" <<'RUBY'
+          version, url, sha256 = ARGV
+          path = "Formula/sonosh.rb"
+          text = File.read(path)
+          text = text.sub(/^  url ".*"$/, "  url \"#{url}\"")
+          text = text.sub(/^  sha256 .*$/, "  sha256 \"#{sha256}\"")
+          text = text.sub(/^  version ".*"$/, "  version \"#{version}\"")
+          File.write(path, text)
+          RUBY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Formula/sonosh.rb
+          git commit -m "Update sonosh formula to ${TAG}" || exit 0
+          git push
