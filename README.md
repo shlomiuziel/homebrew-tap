@@ -18,9 +18,7 @@ brew install --cask shlomiuziel/tap/<name>
 
 ### Formulae
 
-```text
-sonosh
-```
+- `sonosh` - Sonos TUI and CLI
 
 ### Casks
 
