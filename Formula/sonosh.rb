@@ -2,7 +2,7 @@ class Sonosh < Formula
   desc "Sonos TUI and CLI"
   homepage "https://github.com/shlomiuziel/sonosh"
   url "https://github.com/shlomiuziel/sonosh/archive/refs/tags/v0.3.2-sonosh.2.tar.gz"
-  sha256 "2c312e1d4e3e36bd70ae3331eb856f58dbe3ea282f002c3c9224ad1713a05437"
+  sha256 "39fcee42976e69b3fe8878c349c5c8524be19a86f1cb22d485b2c00c4a1d048f"
   version "0.3.2-sonosh.2"
   license "MIT"
 
@@ -10,12 +10,12 @@ class Sonosh < Formula
 
   resource "sonosh-helper-darwin-arm64" do
     url "https://github.com/shlomiuziel/sonosh/releases/download/v0.3.2-sonosh.2/sonosh-helper-darwin-arm64.tar.gz"
-    sha256 "da579dbe48bfc948c75f397ce12498ecf68487756b80761fb8789f0656ddae21"
+    sha256 "b5cd22c7ab61b07874df926b59431569bb0eeffd29f7d6377803b91e57870fb0"
   end
 
   resource "sonosh-helper-darwin-amd64" do
     url "https://github.com/shlomiuziel/sonosh/releases/download/v0.3.2-sonosh.2/sonosh-helper-darwin-amd64.tar.gz"
-    sha256 "554d4b7b2a4c36d483c0eed1371fabf6d0e2701d05e6163d566e804eea32f6e3"
+    sha256 "14eac6b0d140f37d2c31db33d411d171e68ac99319b413466047ed00491dd9b6"
   end
 
   def install
