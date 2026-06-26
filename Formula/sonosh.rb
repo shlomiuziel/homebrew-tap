@@ -7,7 +7,6 @@ class Sonosh < Formula
   head "https://github.com/shlomiuziel/sonosh.git", branch: "main"
 
   depends_on "go" => :build
-  depends_on xcode: :build
 
   def install
     sonosh_bin = libexec/"sonosh"
